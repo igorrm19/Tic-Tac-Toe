@@ -1,3 +1,5 @@
+/*site com botão personalizados: https://www.brasilcode.com.br/35-botoes-css-com-animacao/*/
+
 .container{
     height: 100vh;
     width: 100vw;
@@ -9,18 +11,31 @@
 
 .container-h1{
     line-height: 2.5;
-    color: rgb(177, 21, 197);
+    font-size: 40px;
+    color: rgb(13, 66, 209);
 }
 
 .container-filho{
-    height: 50vh;
-    width: 50vw;
+    position: relative;
+    height: 55vh;
+    width: 55vw;
     border: 1px black solid;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background-image: url(./../../public/pixel-game-1920-x-1080-background-376tmkaby01gblvf.jpg);
+    border: 3px#ec9a1e solid;
+    box-shadow: 10px 10px 10px -5px #050505;
+    border-radius: 10px;
+}
+
+.container-header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
 }
 
 .wrapper {
@@ -71,7 +86,6 @@
       top: 12%;
     }
     
-  /**************SVG****************/
   
   path.one {
       transition: 0.4s;
@@ -109,5 +123,18 @@
       100% {
           fill: white;
       }
+  }
+
+  @media screen and (min-width: 275px ) and (max-width: 700px),   (max-width: 440px), (min-width: 375px ) and (max-width: 500px), (min-width: 500px ) and (max-width: 800px), (min-width: 600px ) and (max-width: 1000px){
+    .cta {
+        padding: 5px 22px;
+        font-size: 20px;
+        background: #6225E6;
+        box-shadow: 3px 3px 0 black;
+    }
+
+    .container-filho{
+        width: 80vw;
+    }
   }
 
