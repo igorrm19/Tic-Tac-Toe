@@ -2,7 +2,16 @@ const musicPlay = document.getElementById("musica");
 const buttonPlay = document.getElementById("button-inicial");
 const playBtn = document.getElementById("playBtn");
 const form = document.getElementById("container-formulario")
+const formId = document.getElementById("formId")
+const benVindo = document.getElementById("benVindo")
+const hidden = document.getElementById("hidden")
+const but1 = document.getElementById("button-1")
+const but2 = document.getElementById("button-2")
+const escO = document.getElementById("escolherO")
+const escX = document.getElementById("escolherX")
+
 let mudo = true;
+let nome;
 
 buttonPlay.addEventListener("click", () => {
     musicPlay.play();
@@ -32,3 +41,25 @@ playBtn.addEventListener("click", () => {
     }
 
 })
+
+
+formId.addEventListener("submit", (event)=>{
+    event.preventDefault()
+
+    const dados = new FormData(formId);
+    nome = dados.get("user")
+
+    hidden.style.visibility = "visible"
+    benVindo.innerHTML = `Bem-vindo ${nome}`;
+    console.log(nome)
+})
+
+function EscolherO(){
+    escO.innerHTML = `${nome} `
+    console.log("okay")
+}
+
+function  EscolherX(){
+    escX.innerHTML = `${nome} `
+    console.log("okay")
+}
