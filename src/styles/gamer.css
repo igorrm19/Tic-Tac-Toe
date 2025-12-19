@@ -1,0 +1,7 @@
+.gamer{
+    visibility: hidden;
+    position: absolute;
+    background-color: rgba(6, 75, 139, 0.938);
+    height: 100%;
+    width: 100%;
+}

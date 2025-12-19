@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="./global.css">
     <link rel="stylesheet" href="./src/styles/container.css">
     <link rel="stylesheet" href="./src/styles/containerFormulario.css">
+    <link rel="stylesheet" href="./src/styles/gamer.css">
+
     <title>Tic-Tac-Toe</title>
+
 </head>
 
 <body>
@@ -65,7 +68,7 @@
                         <hr style="width: 100%; margin: 7px;">
                         <h3 id="benVindo"></h3>
                         <div id="hidden" class="hidden" style="visibility: hidden; display: flex; flex-direction: column;">
-                            <h3>Escolha com qual quer começar</h3>
+                            <h3 id="gambiarra">Escolha com qual quer começar</h3>
                             <div>
                                 <button id="button-1" class="velha" type="button" onclick="EscolherO()">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -83,11 +86,14 @@
                                     </svg>
                                 </button>
                             </div>
-                            <button id="entrar" onclick="Entrar()" style="margin-top: 7px; height: 40px; background-color: blueviolet; border-radius: 20px; display: none;">Entrar</button>
+                            <button id="entrar" onclick="" style="margin-top: 7px; height: 40px; background-color: blueviolet; border-radius: 20px; display: none;" onclick="EntrarInGame()">Entrar</button>
                         </div>
                     </form>
                 </div>
 
+                <div id="gamer" class="gamer">
+                    1
+                </div>
 
             </div>
             <button id="button-inicial" class="button-inicial" style="position: absolute;">

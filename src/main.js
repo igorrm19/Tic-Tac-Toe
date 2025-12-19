@@ -11,6 +11,7 @@ const but2 = document.getElementById("button-2")
 const escO = document.getElementById("escolherO")
 const escX = document.getElementById("escolherX")
 const entrar = document.getElementById("entrar")
+const gamerTela = document.getElementById("gamer")
 
 let mudo = true;
 let nome;
@@ -83,3 +84,19 @@ function Entrar(){
             console.log("entrar")
         }
 }
+
+
+const EntrarInGame = () => {
+  gamerTela.style.visibility = "visible";
+  form.style.visibility = "hidden";
+  entrar.visibility = "hidden";
+  hidden.style.display = "none"
+
+  console.log("teste", form, gamerTela)
+
+}
+
+
+entrar.addEventListener("click", () => {
+  EntrarInGame()
+})
