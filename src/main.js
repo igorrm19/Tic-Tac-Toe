@@ -1,5 +1,3 @@
-import { vari } from "./module.export"
-vari = 1
 
 const musicPlay = document.getElementById("musica");
 const buttonPlay = document.getElementById("button-inicial");
