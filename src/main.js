@@ -23,6 +23,8 @@ const matriz6 = document.getElementById("matriz-6")
 const matriz7 = document.getElementById("matriz-7")
 const matriz8 = document.getElementById("matriz-8")
 const matriz9 = document.getElementById("matriz-9")
+const user = document.getElementById("user")
+const user2 = document.getElementById("user-2")
 
 const array = [];
 const estado = null
@@ -30,6 +32,12 @@ const svgO = `<svg xmlns="http://www.w3.org/2000/svg"  width="25" height="25" co
 const svgX = `<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" color="black" fill="currentColor" class="bi bi-volume-up-fill" viewBox="0 0 16 16"><path d="M11.536 14.01A8.47 8.47 0 0 0 14.026 8a8.47 8.47 0 0 0-2.49-6.01l-.708.707A7.48 7.48 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303z"/><path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.48 5.48 0 0 1 11.025 8a5.48 5.48 0 0 1-1.61 3.89z"/><path d="M8.707 11.182A4.5 4.5 0 0 0 10.025 8a4.5 4.5 0 0 0-1.318-3.182L8 5.525A3.5 3.5 0 0 1 9.025 8 3.5 3.5 0 0 1 8 10.475zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06"/></svg>`;
 let mudo = true;
 let nome;
+let nome2
+let arrayObj = [];
+let obj = {}
+let obj2 = {}
+
+
 
 buttonPlay.addEventListener("click", () => {
     musicPlay.play();
@@ -53,6 +61,8 @@ playBtn.addEventListener("click", () => {
     if (mudo) {
         playBtn.innerHTML = svgO;
         mudo = false
+        
+        
     } else {
         playBtn.innerHTML = svgX;
         mudo = true
@@ -66,30 +76,69 @@ formId.addEventListener("submit", (event) => {
 
     const dados = new FormData(formId);
     nome = dados.get("user")
+    user.style.display = "none";
+    user2.style.display = "block"
+    nome2 = dados.get("user-2")
 
     hidden.style.visibility = "visible"
-    benVindo.innerHTML = `Bem-vindo ${nome}`;
+    benVindo.innerHTML = `Bem-vindo ${nome}, ${nome2}`;
     console.log(nome)
 })
 
 
-function EscolherO() {
+function EscolherO(estado) {
     if (escX.innerHTML === "") {
         escX.innerHTML = `${nome} `
+        escO.innerHTML = `${nome2} `
+        estado = 0
+
         Entrar()
     }
 
+    obj = {
+        "nome": nome,
+        "status": 0
+    }
+
+    obj2 = {
+        "nome": nome2,
+        "status": 1
+    }
+
     console.log("okay")
+    arrayObj.push(obj)
+    arrayObj.push(obj2)
+    console.log(arrayObj)
+
+    return estado
 
 }
 
-function EscolherX() {
+function EscolherX(estado) {
     if (escO.innerHTML === "") {
         escO.innerHTML = `${nome} `
+        escX.innerHTML = `${nome2} `
+        estado = 1
         Entrar()
     }
-    console.log("okay")
 
+
+    obj2 = {
+        "nome": nome2,
+        "status": 1
+    }
+
+    obj2 = {
+        "nome": nome2,
+        "status": 1
+    }
+
+    console.log("okay")
+    arrayObj.push(obj)
+    arrayObj.push(obj2)
+    console.log(arrayObj)
+
+    return estado
 }
 
 
@@ -116,17 +165,3 @@ const EntrarInGame = () => {
 entrar.addEventListener("click", () => {
     EntrarInGame()
 })
-
-
-function Matriz1(estado){
-    if(mudo){
-        estado = 0
-    }
-    return estado
-}
-
-
-
-
-const teste = array.push(Matriz1(estado))
-console.log(array)
