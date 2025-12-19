@@ -1,7 +1,62 @@
 .gamer{
-    visibility: hidden;
-    position: absolute;
-    background-color: rgba(6, 75, 139, 0.938);
+    display: none;
+
+    grid-template-columns: repeat(3, max-content);
+
+    grid-template-rows: repeat(3, max-content);
+
+    place-items: center;
+    place-content: center;
+
+    gap: 1px;
+
+    background-color: transparent;
     height: 100%;
     width: 100%;
+    margin-top: 100px;
+}
+
+.matriz{
+    text-align: center;
+    height: 100px;
+    width: 100px;
+}
+
+#matriz-1{
+  background-color: aqua;
+}
+
+#matriz-2{
+  background-color: blueviolet;
+}
+
+#matriz-3{
+  background-color: brown;
+}
+
+#matriz-4{
+    background-color: chartreuse;
+}
+
+#matriz-5{
+    background-color: chocolate;
+}
+
+#matriz-6{
+    background-color: crimson;
+}
+
+
+#matriz-7{
+    background-color: rgb(155, 58, 78);
+}
+
+
+#matriz-8{
+    background-color: rgb(203, 20, 220);
+}
+
+
+#matriz-9{
+    background-color: rgb(107, 20, 220);
 }
