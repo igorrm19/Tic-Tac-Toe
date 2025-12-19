@@ -10,7 +10,7 @@ const but1 = document.getElementById("button-1")
 const but2 = document.getElementById("button-2")
 const escO = document.getElementById("escolherO")
 const escX = document.getElementById("escolherX")
-
+const entrar = document.getElementById("entrar")
 
 let mudo = true;
 let nome;
@@ -58,11 +58,28 @@ formId.addEventListener("submit", (event)=>{
 
 
 function EscolherO(){
-    escO.innerHTML = `${nome} `
+    if(escX.innerHTML === ""){
+         escX.innerHTML = `${nome} `
+         Entrar()
+    }
+    
     console.log("okay")
+
 }
 
 function  EscolherX(){
-    escX.innerHTML = `${nome} `
+    if(escO.innerHTML === ""){
+        escO.innerHTML = `${nome} `
+        Entrar()
+   }
     console.log("okay")
+
+}
+
+ 
+function Entrar(){
+        if(escO.innerHTML !== "" && escO.innerHTML !== ""){
+            entrar.style.display = "block"
+            console.log("entrar")
+        }
 }
