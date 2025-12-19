@@ -1,3 +1,6 @@
+import { vari } from "./module.export"
+vari = 1
+
 const musicPlay = document.getElementById("musica");
 const buttonPlay = document.getElementById("button-inicial");
 const playBtn = document.getElementById("playBtn");
@@ -9,6 +12,7 @@ const but1 = document.getElementById("button-1")
 const but2 = document.getElementById("button-2")
 const escO = document.getElementById("escolherO")
 const escX = document.getElementById("escolherX")
+
 
 let mudo = true;
 let nome;
@@ -53,6 +57,7 @@ formId.addEventListener("submit", (event)=>{
     benVindo.innerHTML = `Bem-vindo ${nome}`;
     console.log(nome)
 })
+
 
 function EscolherO(){
     escO.innerHTML = `${nome} `
