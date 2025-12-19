@@ -11,7 +11,7 @@ const but2 = document.getElementById("button-2")
 const escO = document.getElementById("escolherO")
 const escX = document.getElementById("escolherX")
 
-
+const teste = 0;
 let mudo = true;
 let nome;
 
