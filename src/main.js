@@ -27,16 +27,32 @@ const user = document.getElementById("user")
 const user2 = document.getElementById("user-2")
 
 const array = [];
-const estado = null
-const svgO = `<svg xmlns="http://www.w3.org/2000/svg"  width="25" height="25" color="black" fill="currentColor" class="bi bi-volume-mute-fill" viewBox="0 0 16 16"><path d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06m7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0"/></svg>`;
-const svgX = `<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" color="black" fill="currentColor" class="bi bi-volume-up-fill" viewBox="0 0 16 16"><path d="M11.536 14.01A8.47 8.47 0 0 0 14.026 8a8.47 8.47 0 0 0-2.49-6.01l-.708.707A7.48 7.48 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303z"/><path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.48 5.48 0 0 1 11.025 8a5.48 5.48 0 0 1-1.61 3.89z"/><path d="M8.707 11.182A4.5 4.5 0 0 0 10.025 8a4.5 4.5 0 0 0-1.318-3.182L8 5.525A3.5 3.5 0 0 1 9.025 8 3.5 3.5 0 0 1 8 10.475zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06"/></svg>`;
+const svgO = `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z" />
+              </svg>`;
+const svgX = `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-0-circle" viewBox="0 0 16 16">
+                            <path
+                                d="M7.988 12.158c-1.851 0-2.941-1.57-2.941-3.99V7.84c0-2.408 1.101-3.996 2.965-3.996 1.857 0 2.935 1.57 2.935 3.996v.328c0 2.408-1.101 3.99-2.959 3.99M8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895" />
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8" />
+             </svg>`
 let mudo = true;
 let nome;
 let nome2
 let arrayObj = [];
-let obj = {}
-let obj2 = {}
+let obj = {};
+let obj2 = {};
+let obj3 = {}
+let obj4 = {}
+let obj5 = {}
+let obj6 = {}
+let obj7 = {}
+let obj8 = {}
+let obj9 = {}
 
+let updateUser = true
 
 
 buttonPlay.addEventListener("click", () => {
@@ -59,12 +75,12 @@ buttonPlay.addEventListener("click", () => {
 playBtn.addEventListener("click", () => {
     musicPlay.muted = !musicPlay.muted;
     if (mudo) {
-        playBtn.innerHTML = svgO;
+        playBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg"  width="25" height="25" color="black" fill="currentColor" class="bi bi-volume-mute-fill" viewBox="0 0 16 16"><path d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06m7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0"/></svg>`;;
         mudo = false
         
         
     } else {
-        playBtn.innerHTML = svgX;
+        playBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" color="black" fill="currentColor" class="bi bi-volume-up-fill" viewBox="0 0 16 16"><path d="M11.536 14.01A8.47 8.47 0 0 0 14.026 8a8.47 8.47 0 0 0-2.49-6.01l-.708.707A7.48 7.48 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303z"/><path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.48 5.48 0 0 1 11.025 8a5.48 5.48 0 0 1-1.61 3.89z"/><path d="M8.707 11.182A4.5 4.5 0 0 0 10.025 8a4.5 4.5 0 0 0-1.318-3.182L8 5.525A3.5 3.5 0 0 1 9.025 8 3.5 3.5 0 0 1 8 10.475zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06"/></svg>`;;
         mudo = true
     }
 
@@ -86,59 +102,25 @@ formId.addEventListener("submit", (event) => {
 })
 
 
-function EscolherO(estado) {
+function EscolherO() {
     if (escX.innerHTML === "") {
         escX.innerHTML = `${nome} `
         escO.innerHTML = `${nome2} `
-        estado = 0
+      
 
         Entrar()
     }
-
-    obj = {
-        "nome": nome,
-        "status": 0
-    }
-
-    obj2 = {
-        "nome": nome2,
-        "status": 1
-    }
-
-    console.log("okay")
-    arrayObj.push(obj)
-    arrayObj.push(obj2)
-    console.log(arrayObj)
-
-    return estado
 
 }
 
-function EscolherX(estado) {
+function EscolherX() {
     if (escO.innerHTML === "") {
         escO.innerHTML = `${nome} `
         escX.innerHTML = `${nome2} `
-        estado = 1
+
         Entrar()
     }
 
-
-    obj2 = {
-        "nome": nome2,
-        "status": 1
-    }
-
-    obj2 = {
-        "nome": nome2,
-        "status": 1
-    }
-
-    console.log("okay")
-    arrayObj.push(obj)
-    arrayObj.push(obj2)
-    console.log(arrayObj)
-
-    return estado
 }
 
 
@@ -164,4 +146,117 @@ const EntrarInGame = () => {
 
 entrar.addEventListener("click", () => {
     EntrarInGame()
+});
+
+
+
+matriz1.addEventListener("click", () => {
+
+        if(updateUser){
+            matriz1.innerHTML = svgO;
+            updateUser = false
+        }else{
+            matriz1.innerHTML = svgX;
+            updateUser = true
+        }
+
+        
+      
+})
+
+matriz2.addEventListener("click", () => {
+   
+        if(updateUser){
+            matriz2.innerHTML = svgO;
+            updateUser = false
+        }else{
+            matriz2.innerHTML = svgX;
+            updateUser = true
+        }
+    
+})
+
+
+matriz3.addEventListener("click", () => {
+
+        if(updateUser){
+            matriz3.innerHTML = svgO;
+            updateUser = false
+        }else{
+            matriz3.innerHTML = svgX;
+            updateUser = true
+        }
+      
+})
+
+matriz4.addEventListener("click", () => {
+
+        if(updateUser){
+            matriz4.innerHTML = svgO;
+            updateUser = false
+        }else{
+            matriz4.innerHTML = svgX;
+            updateUser = true
+        }
+      
+})
+
+matriz5.addEventListener("click", () => {
+
+        if(updateUser){
+            matriz5.innerHTML = svgO;
+            updateUser = false
+        }else{
+            matriz5.innerHTML = svgX;
+            updateUser = true
+        }
+      
+})
+
+matriz6.addEventListener("click", () => {
+   
+        if(updateUser){
+            matriz6.innerHTML = svgO;
+            updateUser = false
+        }else{
+            matriz6.innerHTML = svgX;
+            updateUser = true
+        }
+      
+})
+
+matriz7.addEventListener("click", () => {
+
+        if(updateUser){
+            matriz7.innerHTML = svgO;
+            updateUser = false
+        }else{
+            matriz7.innerHTML = svgX;
+            updateUser = true
+        }
+      
+})
+
+matriz8.addEventListener("click", () => {
+
+        if(updateUser){
+            matriz8.innerHTML = svgO;
+            updateUser = false
+        }else{
+            matriz8.innerHTML = svgX;
+            updateUser = true
+        }
+      
+})
+
+matriz9.addEventListener("click", () => {
+
+        if(updateUser){
+            matriz9.innerHTML = svgO;
+            updateUser = false
+        }else{
+            matriz9.innerHTML = svgX;
+            updateUser = true
+        }
+      
 })
