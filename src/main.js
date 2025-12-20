@@ -168,14 +168,14 @@ formId.addEventListener("submit", (event) => {
     console.log(nome)
 })
 
-let X 
+let X
 let O
 
 function EscolherO() {
     if (escX.innerHTML === "") {
         escX.innerHTML = `${nome} O`
         escO.innerHTML = `${nome2} X `
-       
+
         X = nome2
         O = nome
 
@@ -223,6 +223,13 @@ entrar.addEventListener("click", () => {
 });
 
 
+function LogicaGameOver() {
+    if (obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj5.obejeto == "xis" || obj4.obejeto == "bolinha" && obj5.obejeto == "bolinha" && obj6.obejeto == "bolinha" || obj4.obejeto == "xis" && obj5.obejeto == "xis" && obj6.obejeto == "xis" || obj7.obejeto == "bolinha" && obj8.obejeto == "bolinha" && obj9.obejeto == "bolinha" || obj7.obejeto == "xis" && obj8.obejeto == "xis" && obj9.obejeto == "xis" || obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj3.obejeto == "xis" || obj1.obejeto == "bolinha" && obj4.obejeto == "bolinha" && obj7.obejeto == "bolinha" || obj1.obejeto == "xis" && obj4.obejeto == "xis" && obj7.obejeto == "xis" || obj2.obejeto == "bolinha" && obj5.obejeto == "bolinha" && obj8.obejeto == "bolinha" || obj2.obejeto == "xis" && obj5.obejeto == "xis" && obj8.obejeto == "xis" || obj3.obejeto == "bolinha" && obj6.obejeto == "bolinha" && obj9.obejeto == "bolinha" || obj3.obejeto == "xis" && obj6.obejeto == "xis" && obj9.obejeto == "xis" || obj1.obejeto == "bolinha" && obj5.obejeto == "bolinha" && obj9.obejeto == "bolinha" || obj3.obejeto == "xis" && obj5.obejeto == "xis" && obj7.obejeto == "xis" || obj3.obejeto == "bolinha" && obj5.obejeto == "bolinha" && obj7.obejeto == "bolinha" ) {
+        alert("vencedor", obj1.nome.valueOf)
+    }
+}
+
+
 matriz1.addEventListener("click", () => {
 
     if (updateUser) {
@@ -241,9 +248,7 @@ matriz1.addEventListener("click", () => {
 
     }
 
-    if(obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj3.obejeto == "xis"){
-        alert("vencedor")
-      }
+    LogicaGameOver()
 
 })
 
@@ -265,9 +270,7 @@ matriz2.addEventListener("click", () => {
         obj2.nome = X
     }
 
-    if(obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj3.obejeto == "xis"){
-        alert("vencedor")
-      }
+    LogicaGameOver()
 
 })
 
@@ -289,9 +292,7 @@ matriz3.addEventListener("click", () => {
         obj3.nome = X
     }
 
-    if(obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj3.obejeto == "xis"){
-        alert("vencedor")
-      }
+    LogicaGameOver()
 
 })
 
@@ -312,10 +313,7 @@ matriz4.addEventListener("click", () => {
         obj4.nome = X
     }
 
-    if(obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj3.obejeto == "xis"){
-        alert("vencedor")
-      }
-
+    LogicaGameOver()
 })
 
 matriz5.addEventListener("click", () => {
@@ -335,9 +333,7 @@ matriz5.addEventListener("click", () => {
         obj5.nome = X
     }
 
-    if(obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj3.obejeto == "xis"){
-        alert("vencedor")
-      }
+    LogicaGameOver()
 
 })
 
@@ -358,9 +354,7 @@ matriz6.addEventListener("click", () => {
         obj6.nome = X
     }
 
-    if(obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj3.obejeto == "xis"){
-        alert("vencedor")
-      }
+    LogicaGameOver()
 
 })
 
@@ -382,9 +376,7 @@ matriz7.addEventListener("click", () => {
         obj7.nome = X
     }
 
-    if(obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj3.obejeto == "xis"){
-        alert("vencedor")
-      }
+    LogicaGameOver()
 
 })
 
@@ -406,9 +398,7 @@ matriz8.addEventListener("click", () => {
         obj8.nome = X
     }
 
-    if(obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj3.obejeto == "xis"){
-        alert("vencedor")
-      }
+    LogicaGameOver()
 
 })
 
@@ -430,9 +420,7 @@ matriz9.addEventListener("click", () => {
         obj9.nome = X
     }
 
-    if(obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj3.obejeto == "xis"){
-        alert("vencedor")
-      }
+    LogicaGameOver()
 
 })
 
