@@ -1,7 +1,7 @@
 .container-formulario {
     position: relative;
-    background-color: rgba(124, 84, 39, 0.938);
-    opacity: 0.8;
+    background-color: rgba(221, 63, 137, 0.3);
+    box-shadow: 10px 10px 10px -5px #050505;
     border-radius: 30px;
     display: grid;
     grid-template: 
@@ -77,6 +77,51 @@ form input{
     border-radius: 20px;
 }
 
+.label{
+    font-size: 25px;
+   }
+
+
+@media screen and (min-width: 275px) and (max-width: 700px),  (max-width: 440px), (min-width: 375px ) and (max-width: 500px) {
+   .container-formulario{
+    place-items: center;
+    place-content: center;
+
+    grid-template: 
+      "titulo titulo" 50px 
+      "option option" 0.5fr 
+    ;
+    gap: 8px;
+    height: 70%;
+   }
+
+   .titulo{
+    height: 50px;
+   }
+
+   .options{
+    height: 250px;
+   }
+
+   .titulo h2{
+    font-size: 13px;
+   }
+
+   form input{
+    padding: 7px 10px;
+   }
+
+   .button{
+    width: 70px;
+    height: 30px;
+   }
+
+   .label{
+    font-size: 10px;
+   }
+
+
+}
 
 
 

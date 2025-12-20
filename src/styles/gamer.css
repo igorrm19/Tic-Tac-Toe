@@ -74,3 +74,12 @@
     background-color: rgb(228, 149, 32);
     border: 1px solid rgb(52, 30, 75);
 }
+
+
+@media screen and (min-width: 275px) and (max-width: 700px),  (max-width: 440px), (min-width: 375px ) and (max-width: 500px) {
+    .matriz{
+        height: 80px;
+        width: 80px;
+        box-shadow: 10px 10px 10px -5px #050505;
+    }
+}
