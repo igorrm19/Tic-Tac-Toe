@@ -168,24 +168,29 @@ formId.addEventListener("submit", (event) => {
     console.log(nome)
 })
 
+let X 
+let O
 
 function EscolherO() {
     if (escX.innerHTML === "") {
-        escX.innerHTML = `${nome} `
-        escO.innerHTML = `${nome2} `
+        escX.innerHTML = `${nome} O`
+        escO.innerHTML = `${nome2} X `
        
-        nomes = nome2
+        X = nome2
+        O = nome
 
         Entrar()
     }
 }
 
+
 function EscolherX() {
     if (escO.innerHTML === "") {
-        escO.innerHTML = `${nome} `
-        escX.innerHTML = `${nome2} `
+        escO.innerHTML = `${nome} X`
+        escX.innerHTML = `${nome2} O`
 
-        nomes = nome
+        X = nome
+        O = nome2
 
         Entrar()
     }
@@ -225,17 +230,20 @@ matriz1.addEventListener("click", () => {
         updateUser = false
         obj1.prenchido = true
         obj1.obejeto = "bolinha"
-        obj1.nome = nome
-
+        obj1.nome = O
 
     } else {
         matriz1.innerHTML = svgO;
         updateUser = true
         obj1.prenchido = true
         obj1.obejeto = "xis"
-        obj1.nome = nome2
+        obj1.nome = X
 
     }
+
+    if(obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj3.obejeto == "xis"){
+        alert("vencedor")
+      }
 
 })
 
@@ -247,13 +255,19 @@ matriz2.addEventListener("click", () => {
         updateUser = false
         obj2.prenchido = true
         obj2.obejeto = "bolinha"
+        obj2.nome = O
 
     } else {
         matriz2.innerHTML = svgO;
         updateUser = true
         obj2.prenchido = true
         obj2.obejeto = "xis"
+        obj2.nome = X
     }
+
+    if(obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj3.obejeto == "xis"){
+        alert("vencedor")
+      }
 
 })
 
@@ -265,13 +279,19 @@ matriz3.addEventListener("click", () => {
         updateUser = false
         obj3.prenchido = true
         obj3.obejeto = "bolinha"
+        obj3.nome = O
 
     } else {
         matriz3.innerHTML = svgO;
         updateUser = true
         obj3.prenchido = true
         obj3.obejeto = "xis"
+        obj3.nome = X
     }
+
+    if(obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj3.obejeto == "xis"){
+        alert("vencedor")
+      }
 
 })
 
@@ -282,12 +302,19 @@ matriz4.addEventListener("click", () => {
         updateUser = false
         obj4.prenchido = true
         obj4.obejeto = "bolinha"
+        obj4.nome = O
 
     } else {
         matriz4.innerHTML = svgO;
         updateUser = true
         obj4.prenchido = true
+        obj4.obejeto = "xis"
+        obj4.nome = X
     }
+
+    if(obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj3.obejeto == "xis"){
+        alert("vencedor")
+      }
 
 })
 
@@ -298,13 +325,19 @@ matriz5.addEventListener("click", () => {
         updateUser = false
         obj5.prenchido = true
         obj5.obejeto = "bolinha"
+        obj5.nome = O
 
     } else {
         matriz5.innerHTML = svgO;
         updateUser = true
         obj5.prenchido = true
         obj5.obejeto = "xis"
+        obj5.nome = X
     }
+
+    if(obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj3.obejeto == "xis"){
+        alert("vencedor")
+      }
 
 })
 
@@ -315,13 +348,19 @@ matriz6.addEventListener("click", () => {
         updateUser = false
         obj6.prenchido = true
         obj6.obejeto = "bolinha"
+        obj6.nome = O
 
     } else {
         matriz6.innerHTML = svgO;
         updateUser = true
         obj6.prenchido = true
         obj6.obejeto = "xis"
+        obj6.nome = X
     }
+
+    if(obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj3.obejeto == "xis"){
+        alert("vencedor")
+      }
 
 })
 
@@ -332,13 +371,20 @@ matriz7.addEventListener("click", () => {
         updateUser = false
         obj7.prenchido = true
         obj7.obejeto = "bolinha"
+        obj7.nome = O
+
 
     } else {
         matriz7.innerHTML = svgO;
         updateUser = true
         obj7.prenchido = true
         obj7.obejeto = "xis"
+        obj7.nome = X
     }
+
+    if(obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj3.obejeto == "xis"){
+        alert("vencedor")
+      }
 
 })
 
@@ -349,13 +395,20 @@ matriz8.addEventListener("click", () => {
         updateUser = false
         obj8.prenchido = true
         obj8.obejeto = "bolinha"
+        obj8.nome = O
+
 
     } else {
         matriz8.innerHTML = svgO;
         updateUser = true
         obj8.prenchido = true
         obj8.obejeto = "xis"
+        obj8.nome = X
     }
+
+    if(obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj3.obejeto == "xis"){
+        alert("vencedor")
+      }
 
 })
 
@@ -366,13 +419,20 @@ matriz9.addEventListener("click", () => {
         updateUser = false
         obj9.prenchido = true
         obj9.obejeto = "bolinha"
+        obj9.nome = O
+
 
     } else {
         matriz9.innerHTML = svgO;
         updateUser = true
         obj9.prenchido = true
         obj9.obejeto = "xis"
+        obj9.nome = X
     }
+
+    if(obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj3.obejeto == "xis"){
+        alert("vencedor")
+      }
 
 })
 
@@ -389,3 +449,4 @@ arrayObj.push(
 )
 
 console.log(arrayObj)
+
