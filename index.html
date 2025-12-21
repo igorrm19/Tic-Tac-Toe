@@ -17,6 +17,7 @@
     <div class="container">
         <h1 class="container-h1">Jogo da velha</h1>
         <div class="container-filho">
+            <p id="vencedor" style="margin-top: 20px;">Vencedor: </p>
             <div id="gamer" class="gamer">
                 <div id="matriz-1" class="matriz"></div>
                 <div id="matriz-2" class="matriz"></div>
@@ -47,6 +48,9 @@
                 <audio id="musica" autoplay="true" preload="auto" loop>
                     <source src="./public/mp3/Kashido - Swan Lake Theme.mp3" type="audio/mp3">
                 </audio>
+                <audio id="buttonSom" autoplay="false" preload="auto">
+                    <source src="./public/mp3/video-game-power-up-225608.mp3" type="audio/mp3">
+                </audio>
                 <button id="playBtn" style="background-color: transparent; border: none;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" color="black" fill="currentColor"
                         class="bi bi-volume-up-fill" viewBox="0 0 16 16">
@@ -67,12 +71,12 @@
                 </div>
                 <div class="options">
                     <form id="formId" action="">
-                        <label class="label" style="opacity: 1;">Nick Name</label>
+                        <label class="label" style="opacity: 1;"><h3>Nick Name</h3></label>
                         <hr>
                         <input id="user" type="text" name="user">
                         <input id="user-2" type="text" name="user-2" style="display: none;">
                         <hr style="width: 100%; margin: 7px;">
-                        <label class="label" style="opacity: 1;">Escolha com quem deseja jogar</label>
+                        <label class="label" style="opacity: 1;"><h3>Escolha com quem deseja jogar</h3></label>
                         <div style="display: flex; align-items: center; justify-content: center; gap: 5px;">
                             <button class="button" type="submit""> 1 play</button>
                         <button class=" button" type="submit"> 2 play</button>
@@ -82,7 +86,7 @@
                         <div id="hidden" class="hidden" style="visibility: hidden; display: flex; flex-direction: column;">
                             <h3 class="label" id="gambiarra">Escolha com qual quer começar</h3>
                             <div>
-                                <button id="button-1" class="velha" type="button" onclick="EscolherO()">
+                                <button id="button-1" class="velha" type="button">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-0-circle" viewBox="0 0 16 16">
                                         <path
@@ -90,7 +94,7 @@
                                         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8" />
                                     </svg>
                                 </button>
-                                <button id="button-2" class="velha" type="button" onclick="EscolherX()">
+                                <button id="button-2" class="velha" type="button">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-x-circle-fill" viewBox="0 0 16 16">
                                         <path
@@ -131,7 +135,7 @@
     </div>
 
 
-    <script defer  src="./src/main.js"></script>
+    <script type="module" src="./src//main.js"></script>
 
 </body>
 

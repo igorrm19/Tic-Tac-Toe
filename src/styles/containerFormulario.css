@@ -1,6 +1,6 @@
 .container-formulario {
     position: relative;
-    background-color: rgba(221, 63, 137, 0.3);
+    background-color: rgba(32, 161, 108, 0.3);
     box-shadow: 10px 10px 10px -5px #050505;
     border-radius: 30px;
     display: grid;
@@ -54,11 +54,16 @@ form input{
     font-family: inherit;    
     font-size: 1rem;   
     outline: none;
+} 
+
+form label{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 1;
 }
 
 .button{
     width: 100px;
-    height: 40px;
+    height: 35px;
     border-radius: 10px;
     color: #ddd;
     background-color: rgb(99, 30, 210);
@@ -88,11 +93,12 @@ form input{
     place-content: center;
 
     grid-template: 
-      "titulo titulo" 50px 
+      "titulo titulo" 45px 
       "option option" 0.5fr 
     ;
     gap: 8px;
-    height: 70%;
+    height:80%;
+    width: 80%;
    }
 
    .titulo{
