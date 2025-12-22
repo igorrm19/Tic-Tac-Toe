@@ -280,7 +280,6 @@ function LogicaGameOver() {
 }
 
 
-
 matriz1.addEventListener("click", () => {
 
     if (updateUser) {
