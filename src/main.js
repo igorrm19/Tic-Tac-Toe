@@ -1,4 +1,5 @@
 
+
 const musicPlay = document.getElementById("musica");
 const buttonPlay = document.getElementById("button-inicial");
 const playBtn = document.getElementById("playBtn");
@@ -25,9 +26,11 @@ const matriz9 = document.getElementById("matriz-9");
 const user = document.getElementById("user");
 const user2 = document.getElementById("user-2");
 const buttonSong = document.getElementById("buttonSom");
-const vencedor = document.getElementById("vencedor")
+const valorIncrementoO = document.getElementById("valorO");
+const valorIncrementoX = document.getElementById("valorX");
+const venced = document.getElementById("vencedor");
+const reiniciar = document.getElementById("reiniciar")
 
-const array = [];
 const svgO = `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
                             fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
                             <path
@@ -138,13 +141,12 @@ buttonPlay.addEventListener("click", () => {
         return a
     }
 
-    const result = teste()
+    const result = teste();
     if (result) {
-        form.style.visibility = "visible"
-        console.log("testando")
-    }
-})
-
+        form.style.visibility = "visible";
+        console.log("testando");
+    };
+});
 
 playBtn.addEventListener("click", () => {
     musicPlay.muted = !musicPlay.muted;
@@ -212,8 +214,7 @@ but2.addEventListener("click", () => {
 function Entrar() {
     if (escO.innerHTML !== "" && escO.innerHTML !== "") {
         entrar.style.display = "block"
-        console.log("entrar")
-        SongButton()
+        console.log("entrar");
     }
 }
 
@@ -236,24 +237,48 @@ entrar.addEventListener("click", () => {
 });
 
 
-function LogicaGameOver() {
-    if (obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj5.obejeto == "xis" || obj4.obejeto == "bolinha" && obj5.obejeto == "bolinha" && obj6.obejeto == "bolinha" || obj4.obejeto == "xis" && obj5.obejeto == "xis" && obj6.obejeto == "xis" || obj7.obejeto == "bolinha" && obj8.obejeto == "bolinha" && obj9.obejeto == "bolinha" || obj7.obejeto == "xis" && obj8.obejeto == "xis" && obj9.obejeto == "xis" || obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj3.obejeto == "xis" || obj1.obejeto == "bolinha" && obj4.obejeto == "bolinha" && obj7.obejeto == "bolinha" || obj1.obejeto == "xis" && obj4.obejeto == "xis" && obj7.obejeto == "xis" || obj2.obejeto == "bolinha" && obj5.obejeto == "bolinha" && obj8.obejeto == "bolinha" || obj2.obejeto == "xis" && obj5.obejeto == "xis" && obj8.obejeto == "xis" || obj3.obejeto == "bolinha" && obj6.obejeto == "bolinha" && obj9.obejeto == "bolinha" || obj3.obejeto == "xis" && obj6.obejeto == "xis" && obj9.obejeto == "xis" || obj1.obejeto == "bolinha" && obj5.obejeto == "bolinha" && obj9.obejeto == "bolinha" || obj3.obejeto == "xis" && obj5.obejeto == "xis" && obj7.obejeto == "xis" || obj3.obejeto == "bolinha" && obj5.obejeto == "bolinha" && obj7.obejeto == "bolinha") {
-        alert("vencedor")
-        SongButton();
-    }
-}
 
-let result
+
+let valueX = 0;
+let valueO = 0;
+let vencedor = "";
 function ArrayObj(obejeto, posisao) {
+
+    function Incremento(increment) {
+        return ++increment
+    }
+
     arrayObj.splice(posisao, 1, obejeto)
     console.log(arrayObj)
 
-    result = arrayObj.filter(obj => {
-        return [1, 2, 3].includes(obj.id) && obj.nome === X || [1, 2, 3].includes(obj.id) && obj.nome === O
-    }).map(obj => obj.nome);
+    if (arrayObj[1].prenchido === true && arrayObj[2].prenchido && arrayObj[3].prenchido && arrayObj[1].nome === X && arrayObj[2].nome === X && arrayObj[3].nome === X || arrayObj[4].prenchido === true && arrayObj[5].prenchido && arrayObj[6].prenchido && arrayObj[4].nome === X && arrayObj[5].nome === X && arrayObj[6].nome === X || arrayObj[7].prenchido === true && arrayObj[8].prenchido && arrayObj[9].prenchido && arrayObj[7].nome === X && arrayObj[8].nome === X && arrayObj[9].nome === X || arrayObj[3].prenchido === true && arrayObj[5].prenchido && arrayObj[7].prenchido && arrayObj[3].nome === X && arrayObj[5].nome === X && arrayObj[7].nome === X || arrayObj[1].prenchido === true && arrayObj[5].prenchido && arrayObj[9].prenchido && arrayObj[1].nome === X && arrayObj[5].nome === X && arrayObj[9].nome === X || arrayObj[1].prenchido === true && arrayObj[4].prenchido && arrayObj[7].prenchido && arrayObj[1].nome === X && arrayObj[4].nome === X && arrayObj[7].nome === X || arrayObj[2].prenchido === true && arrayObj[5].prenchido && arrayObj[8].prenchido && arrayObj[2].nome === X && arrayObj[5].nome === X && arrayObj[8].nome === X || arrayObj[3].prenchido === true && arrayObj[6].prenchido && arrayObj[9].prenchido && arrayObj[3].nome === X && arrayObj[6].nome === X && arrayObj[9].nome === X ) {
+        console.log("Vencedor ", X)
+        vencedor = X
+        valueX++
+        valorIncrementoO.innerHTML = valueX
+    }
 
-    console.log("Vencedor", result)
+    if (arrayObj[1].prenchido === true && arrayObj[2].prenchido && arrayObj[3].prenchido && arrayObj[1].nome === O && arrayObj[2].nome === O && arrayObj[3].nome === O  || arrayObj[4].prenchido === true && arrayObj[5].prenchido && arrayObj[6].prenchido && arrayObj[4].nome === O && arrayObj[5].nome === X && arrayObj[6].nome === O || arrayObj[7].prenchido === true && arrayObj[8].prenchido && arrayObj[9].prenchido && arrayObj[7].nome === O && arrayObj[8].nome === O && arrayObj[9].nome === O || arrayObj[3].prenchido === true && arrayObj[5].prenchido && arrayObj[7].prenchido && arrayObj[3].nome === O && arrayObj[5].nome === O && arrayObj[7].nome === O || arrayObj[1].prenchido === true && arrayObj[5].prenchido && arrayObj[9].prenchido && arrayObj[1].nome === O && arrayObj[5].nome === O && arrayObj[9].nome === O || arrayObj[1].prenchido === true && arrayObj[4].prenchido && arrayObj[7].prenchido && arrayObj[1].nome === O && arrayObj[4].nome === O && arrayObj[7].nome === O || arrayObj[2].prenchido === true && arrayObj[5].prenchido && arrayObj[8].prenchido && arrayObj[2].nome === O && arrayObj[5].nome === O && arrayObj[8].nome === O || arrayObj[3].prenchido === true && arrayObj[6].prenchido && arrayObj[9].prenchido && arrayObj[3].nome === O && arrayObj[6].nome === O && arrayObj[9].nome === O ) {
+        console.log("Vencedor ", O)
+        vencedor = O
+        valueO++
+        valorIncrementoX.innerHTML = valueO
+    }
+
+    venced.innerHTML = `Vencedor: ${vencedor}`;
+    venced.style.marginLeft = "10px"
+
 }
+
+
+function LogicaGameOver() {
+    if (obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj5.obejeto == "xis" || obj4.obejeto == "bolinha" && obj5.obejeto == "bolinha" && obj6.obejeto == "bolinha" || obj4.obejeto == "xis" && obj5.obejeto == "xis" && obj6.obejeto == "xis" || obj7.obejeto == "bolinha" && obj8.obejeto == "bolinha" && obj9.obejeto == "bolinha" || obj7.obejeto == "xis" && obj8.obejeto == "xis" && obj9.obejeto == "xis" || obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj3.obejeto == "xis" || obj1.obejeto == "bolinha" && obj4.obejeto == "bolinha" && obj7.obejeto == "bolinha" || obj1.obejeto == "xis" && obj4.obejeto == "xis" && obj7.obejeto == "xis" || obj2.obejeto == "bolinha" && obj5.obejeto == "bolinha" && obj8.obejeto == "bolinha" || obj2.obejeto == "xis" && obj5.obejeto == "xis" && obj8.obejeto == "xis" || obj3.obejeto == "bolinha" && obj6.obejeto == "bolinha" && obj9.obejeto == "bolinha" || obj3.obejeto == "xis" && obj6.obejeto == "xis" && obj9.obejeto == "xis" || obj1.obejeto == "bolinha" && obj5.obejeto == "bolinha" && obj9.obejeto == "bolinha" || obj3.obejeto == "xis" && obj5.obejeto == "xis" && obj7.obejeto == "xis" || obj3.obejeto == "bolinha" && obj5.obejeto == "bolinha" && obj7.obejeto == "bolinha") {
+        alert("vencedor", vencedor)
+        SongButton();
+        Vencedor();
+    }
+}
+
 
 
 matriz1.addEventListener("click", () => {
@@ -468,3 +493,54 @@ matriz9.addEventListener("click", () => {
     LogicaGameOver()
 
 });
+
+function Vencedor(){
+  obj1.prenchido = false;
+    obj1.obejeto = "";
+    obj1.nome = "";
+    matriz1.innerHTML = "";
+
+    obj2.prenchido = false;
+    obj2.obejeto = "";
+    obj2.nome = "";
+    matriz2.innerHTML = "";
+
+    obj3.prenchido = false;
+    obj3.obejeto = "";
+    obj3.nome = "";
+    matriz3.innerHTML = "";
+
+    obj4.prenchido = false;
+    obj4.obejeto = "";
+    obj4.nome = "";
+    matriz4.innerHTML = "";
+
+    obj5.prenchido = false;
+    obj5.obejeto = "";
+    obj5.nome = "";
+    matriz5.innerHTML = "";
+
+    obj6.prenchido = false;
+    obj6.obejeto = "";
+    obj6.nome = "";
+    matriz6.innerHTML = "";
+
+    obj7.prenchido = false;
+    obj7.obejeto = "";
+    obj7.nome = "";
+    matriz7.innerHTML = "";
+
+    obj8.prenchido = false;
+    obj8.obejeto = "";
+    obj8.nome = "";
+    matriz8.innerHTML = "";
+
+    obj9.prenchido = false;
+    obj9.obejeto = "";
+    obj9.nome = "";
+    matriz9.innerHTML = "";
+}
+
+reiniciar.addEventListener("click", () => {
+    Vencedor();
+})
