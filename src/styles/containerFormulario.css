@@ -3,7 +3,7 @@
     background-color: rgba(124, 84, 39, 0.938);
     opacity: 0.8;
     border-radius: 30px;
-    display: grid;
+    display: none;
     grid-template: 
       "titulo titulo" 100px 
       "option option" 1fr 
