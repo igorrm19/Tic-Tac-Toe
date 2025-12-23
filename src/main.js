@@ -142,7 +142,7 @@ buttonPlay.addEventListener("click", () => {
 
     const result = teste();
     if (result) {
-        form.style.visibility = "visible";
+        form.style.display = "grid";
     };
 });
 
