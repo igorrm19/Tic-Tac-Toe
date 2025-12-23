@@ -1,3 +1,4 @@
 {
-    "liveServer.settings.multiRootWorkspaceName": "Tic-Tac-Toe"
+    "liveServer.settings.multiRootWorkspaceName": "Tic-Tac-Toe",
+    "liveServer.settings.port": 5501
 }
