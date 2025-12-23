@@ -264,6 +264,12 @@ function LogicaGameOver() {
         SongButton();
         Vencedor();
     }
+
+    if(obj1.prenchido === true && obj2.prenchido === true && obj3.prenchido === true && obj4.prenchido === true && obj5.prenchido === true && obj6.prenchido === true && obj7.prenchido === true && obj8.prenchido === true && obj9.prenchido === true){
+        alert("Empate");
+        SongButton();
+        Vencedor();
+    }
 }
 
 
