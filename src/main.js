@@ -237,15 +237,11 @@ let valueO = 0;
 let vencedor = "";
 function ArrayObj(obejeto, posisao) {
 
-    function Incremento(increment) {
-        return ++increment
-    }
 
     arrayObj.splice(posisao, 1, obejeto)
     console.log(arrayObj)
 
     if (arrayObj[1].prenchido === true && arrayObj[2].prenchido && arrayObj[3].prenchido && arrayObj[1].nome === X && arrayObj[2].nome === X && arrayObj[3].nome === X || arrayObj[4].prenchido === true && arrayObj[5].prenchido && arrayObj[6].prenchido && arrayObj[4].nome === X && arrayObj[5].nome === X && arrayObj[6].nome === X || arrayObj[7].prenchido === true && arrayObj[8].prenchido && arrayObj[9].prenchido && arrayObj[7].nome === X && arrayObj[8].nome === X && arrayObj[9].nome === X || arrayObj[3].prenchido === true && arrayObj[5].prenchido && arrayObj[7].prenchido && arrayObj[3].nome === X && arrayObj[5].nome === X && arrayObj[7].nome === X || arrayObj[1].prenchido === true && arrayObj[5].prenchido && arrayObj[9].prenchido && arrayObj[1].nome === X && arrayObj[5].nome === X && arrayObj[9].nome === X || arrayObj[1].prenchido === true && arrayObj[4].prenchido && arrayObj[7].prenchido && arrayObj[1].nome === X && arrayObj[4].nome === X && arrayObj[7].nome === X || arrayObj[2].prenchido === true && arrayObj[5].prenchido && arrayObj[8].prenchido && arrayObj[2].nome === X && arrayObj[5].nome === X && arrayObj[8].nome === X || arrayObj[3].prenchido === true && arrayObj[6].prenchido && arrayObj[9].prenchido && arrayObj[3].nome === X && arrayObj[6].nome === X && arrayObj[9].nome === X) {
-        console.log("Vencedor ", X)
         vencedor = X
         valueX++
         valorIncrementoO.innerHTML = valueX
