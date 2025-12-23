@@ -1,5 +1,4 @@
 
-
 const musicPlay = document.getElementById("musica");
 const buttonPlay = document.getElementById("button-inicial");
 const playBtn = document.getElementById("playBtn");
