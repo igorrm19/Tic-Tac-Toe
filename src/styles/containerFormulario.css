@@ -3,7 +3,7 @@
     background-color: rgba(32, 161, 108, 0.3);
     box-shadow: 10px 10px 10px -5px #050505;
     border-radius: 30px;
-    display: grid;
+    display: none;
     grid-template: 
       "titulo titulo" 100px 
       "option option" 1fr 
