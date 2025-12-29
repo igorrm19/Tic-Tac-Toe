@@ -48,7 +48,7 @@ let arrayObj = [];
 let nomes = "";
 let stat = false;
 let obejeto = "";
-
+//
 let obj1 = {
     id: 1,
     nome: nomes,
