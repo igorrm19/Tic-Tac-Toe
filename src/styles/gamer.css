@@ -1,4 +1,4 @@
-.gamer{
+.gamer {
     display: none;
 
     grid-template-columns: repeat(3, max-content);
@@ -16,7 +16,7 @@
     margin-top: 100px;
 }
 
-.matriz{
+.matriz {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,57 +27,59 @@
     border-radius: 10px;
 }
 
-#matriz-1{
-  background-color: rgb(228, 149, 32);
-  border: 1px solid rgb(52, 30, 75);
+#matriz-1 {
+    background-color: rgb(228, 149, 32);
+    border: 1px solid rgb(52, 30, 75);
 }
 
-#matriz-2{
-  background-color: chartreuse;
-  border: 1px solid rgb(52, 30, 75);
-}
-
-#matriz-3{
-  background-color: rgb(228, 149, 32);
-  border: 1px solid rgb(52, 30, 75);
-}
-
-#matriz-4{
+#matriz-2 {
     background-color: chartreuse;
     border: 1px solid rgb(52, 30, 75);
 }
 
-#matriz-5{
+#matriz-3 {
+    background-color: rgb(228, 149, 32);
+    border: 1px solid rgb(52, 30, 75);
+}
+
+#matriz-4 {
     background-color: chartreuse;
     border: 1px solid rgb(52, 30, 75);
 }
 
-#matriz-6{
+#matriz-5 {
+    background-color: chartreuse;
+    border: 1px solid rgb(52, 30, 75);
+}
+
+#matriz-6 {
     background-color: chartreuse;
     border: 1px solid rgb(52, 30, 75);
 }
 
 
-#matriz-7{
+#matriz-7 {
     background-color: rgb(228, 149, 32);
     border: 1px solid rgb(52, 30, 75);
 }
 
 
-#matriz-8{
+#matriz-8 {
     background-color: chartreuse;
     border: 1px solid rgb(52, 30, 75);
 }
 
 
-#matriz-9{
+#matriz-9 {
     background-color: rgb(228, 149, 32);
     border: 1px solid rgb(52, 30, 75);
 }
 
 
-@media screen and (min-width: 275px) and (max-width: 700px),  (max-width: 440px), (min-width: 375px ) and (max-width: 500px) {
-    .matriz{
+@media screen and (min-width: 275px) and (max-width: 700px),
+(max-width: 440px),
+(min-width: 375px) and (max-width: 500px) {
+    .matriz {
         height: 80px;
         width: 80px;
         box-shadow: 10px 10px 10px -5px #050505;

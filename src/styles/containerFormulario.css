@@ -4,10 +4,8 @@
     box-shadow: 10px 10px 10px -5px #050505;
     border-radius: 30px;
     display: none;
-    grid-template: 
-      "titulo titulo" 100px 
-      "option option" 1fr 
-    ;
+    grid-template:
+        "titulo titulo" 100px "option option" 1fr;
     gap: 8px;
 
 
@@ -19,7 +17,7 @@
 }
 
 
-.titulo{
+.titulo {
     grid-area: titulo;
     border: 4px solid rgba(221, 208, 208, 0.781);
     border-style: double;
@@ -27,12 +25,12 @@
     text-align: center;
 }
 
-.titulo h2{
+.titulo h2 {
     color: rgb(240, 237, 237);
     opacity: 1;
 }
 
-.options{
+.options {
     grid-area: option;
     border: 4px solid rgba(221, 208, 208, 0.781);
     border-style: double;
@@ -40,41 +38,41 @@
     text-align: center;
 }
 
-form{
+form {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-form input{
+form input {
     padding: 12px 16px;
     border: 2px solid #ddd;
-    border-radius: 8px; 
-    font-family: inherit;    
-    font-size: 1rem;   
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
     outline: none;
-} 
+}
 
-form label{
+form label {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     opacity: 1;
 }
 
-.button{
+.button {
     width: 100px;
     height: 35px;
     border-radius: 10px;
     color: #ddd;
     background-color: rgb(99, 30, 210);
-    transition: all 0.3s; 
+    transition: all 0.3s;
 }
 
-.button:hover{
+.button:hover {
     background-color: darkcyan;
 }
 
-.velha{
+.velha {
     width: 60px;
     height: 60px;
     background-color: palegreen;
@@ -82,52 +80,72 @@ form label{
     border-radius: 20px;
 }
 
-.label{
+.label {
     font-size: 25px;
-   }
-
-
-@media screen and (min-width: 275px) and (max-width: 700px),  (max-width: 440px), (min-width: 375px ) and (max-width: 500px) {
-   .container-formulario{
-    place-items: center;
-    place-content: center;
-
-    grid-template: 
-      "titulo titulo" 45px 
-      "option option" 0.5fr 
-    ;
-    gap: 8px;
-    height:80%;
-    width: 80%;
-   }
-
-   .titulo{
-    height: 50px;
-   }
-
-   .options{
-    height: 250px;
-   }
-
-   .titulo h2{
-    font-size: 13px;
-   }
-
-   form input{
-    padding: 7px 10px;
-   }
-
-   .button{
-    width: 70px;
-    height: 30px;
-   }
-
-   .label{
-    font-size: 10px;
-   }
-
-
 }
 
 
+@media screen and (max-width: 768px) {
+    .container-formulario {
+        place-items: center;
+        place-content: center;
+        grid-template:
+            "titulo titulo" auto
+            "option option" 1fr
+        ;
+        gap: 5px;
+        height: auto;
+        max-height: 90vh;
+        width: 95%;
+        padding: 10px;
+        overflow-y: auto;
+    }
 
+    .titulo {
+        height: auto;
+        padding: 5px;
+        border-width: 4px;
+    }
+
+    .options {
+        height: auto;
+        min-height: 200px;
+        border-width: 4px;
+        padding: 5px;
+    }
+
+    .titulo h2 {
+        font-size: 12px;
+        /* Reduced from 16px */
+        margin: 0;
+    }
+
+    form input {
+        padding: 6px 8px;
+        font-size: 12px;
+        /* Reduced from 14px */
+        width: 90%;
+    }
+
+    .button {
+        width: 70px;
+        height: 25px;
+        font-size: 10px;
+        /* Reduced from 12px */
+    }
+
+    .label {
+        font-size: 11px;
+        /* Reduced from 14px */
+    }
+
+    .velha {
+        width: 35px;
+        height: 35px;
+    }
+
+    .velha svg {
+        width: 10px;
+        height: 10px;
+    }
+}
