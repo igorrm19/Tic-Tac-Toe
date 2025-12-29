@@ -42,13 +42,13 @@ const svgX = `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fil
                             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8" />
              </svg>`;
 let mudo = true;
-let nome;
-let nome2;
+let nome = "";
+let nome2 = "";
 let arrayObj = [];
 let nomes = "";
 let stat = false;
 let obejeto = "";
-
+//
 let obj1 = {
     id: 1,
     nome: nomes,
@@ -168,11 +168,16 @@ formId.addEventListener("submit", (event) => {
     SongButton()
 
     const dados = new FormData(formId);
-    nome = dados.get("user")
+    nome = dados.get("user") || ""
+    if (nome === "") {
+        nome = "Jogador 1"
+    }
     user.style.display = "none";
     user2.style.display = "block"
-    nome2 = dados.get("user-2")
-
+    nome2 = dados.get("user-2") || ""
+    if (nome2 === "") {
+        nome2 = "Jogador 2"
+    }
     hidden.style.visibility = "visible"
     benVindo.innerHTML = `Bem-vindo ${nome}, ${nome2}`;
 })
@@ -181,7 +186,7 @@ let X
 let O
 
 but1.addEventListener("click", () => {
-    if (escX.innerHTML === "") {
+    if (typeof X === "undefined") {
         escO.innerHTML = `${nome}`
         escX.innerHTML = `${nome2}`
         SongButton()
@@ -194,7 +199,7 @@ but1.addEventListener("click", () => {
 });
 
 but2.addEventListener("click", () => {
-    if (escX.innerHTML === "") {
+    if (typeof X === "undefined") {
         escX.innerHTML = `${nome}`
         escO.innerHTML = `${nome2}`
         SongButton()
@@ -209,9 +214,7 @@ but2.addEventListener("click", () => {
 
 
 function Entrar() {
-    if (escO.innerHTML !== "" && escO.innerHTML !== "") {
-        entrar.style.display = "block"
-    }
+    entrar.style.display = "block"
 }
 
 
