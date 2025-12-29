@@ -182,12 +182,12 @@ let O
 
 but1.addEventListener("click", () => {
     if (escX.innerHTML === "") {
-        escX.innerHTML = `${nome}`
-        escO.innerHTML = `${nome2}`
+        escO.innerHTML = `${nome}`
+        escX.innerHTML = `${nome2}`
         SongButton()
 
-        X = nome2
         O = nome
+        X = nome2
 
         Entrar()
     }
@@ -199,8 +199,8 @@ but2.addEventListener("click", () => {
         escO.innerHTML = `${nome2}`
         SongButton()
 
-        X = nome2
-        O = nome
+        X = nome
+        O = nome2
 
         Entrar()
     }
@@ -240,13 +240,13 @@ function ArrayObj(obejeto, posisao) {
     arrayObj.splice(posisao, 1, obejeto)
     console.log(arrayObj)
 
-    if (arrayObj[1].prenchido === true && arrayObj[2].prenchido && arrayObj[3].prenchido && arrayObj[1].nome === X && arrayObj[2].nome === X && arrayObj[3].nome === X || arrayObj[4].prenchido === true && arrayObj[5].prenchido && arrayObj[6].prenchido && arrayObj[4].nome === X && arrayObj[5].nome === X && arrayObj[6].nome === X || arrayObj[7].prenchido === true && arrayObj[8].prenchido && arrayObj[9].prenchido && arrayObj[7].nome === X && arrayObj[8].nome === X && arrayObj[9].nome === X || arrayObj[3].prenchido === true && arrayObj[5].prenchido && arrayObj[7].prenchido && arrayObj[3].nome === X && arrayObj[5].nome === X && arrayObj[7].nome === X || arrayObj[1].prenchido === true && arrayObj[5].prenchido && arrayObj[9].prenchido && arrayObj[1].nome === X && arrayObj[5].nome === X && arrayObj[9].nome === X || arrayObj[1].prenchido === true && arrayObj[4].prenchido && arrayObj[7].prenchido && arrayObj[1].nome === X && arrayObj[4].nome === X && arrayObj[7].nome === X || arrayObj[2].prenchido === true && arrayObj[5].prenchido && arrayObj[8].prenchido && arrayObj[2].nome === X && arrayObj[5].nome === X && arrayObj[8].nome === X || arrayObj[3].prenchido === true && arrayObj[6].prenchido && arrayObj[9].prenchido && arrayObj[3].nome === X && arrayObj[6].nome === X && arrayObj[9].nome === X ) {
+    if (arrayObj[1].prenchido === true && arrayObj[2].prenchido && arrayObj[3].prenchido && arrayObj[1].nome === X && arrayObj[2].nome === X && arrayObj[3].nome === X || arrayObj[4].prenchido === true && arrayObj[5].prenchido && arrayObj[6].prenchido && arrayObj[4].nome === X && arrayObj[5].nome === X && arrayObj[6].nome === X || arrayObj[7].prenchido === true && arrayObj[8].prenchido && arrayObj[9].prenchido && arrayObj[7].nome === X && arrayObj[8].nome === X && arrayObj[9].nome === X || arrayObj[3].prenchido === true && arrayObj[5].prenchido && arrayObj[7].prenchido && arrayObj[3].nome === X && arrayObj[5].nome === X && arrayObj[7].nome === X || arrayObj[1].prenchido === true && arrayObj[5].prenchido && arrayObj[9].prenchido && arrayObj[1].nome === X && arrayObj[5].nome === X && arrayObj[9].nome === X || arrayObj[1].prenchido === true && arrayObj[4].prenchido && arrayObj[7].prenchido && arrayObj[1].nome === X && arrayObj[4].nome === X && arrayObj[7].nome === X || arrayObj[2].prenchido === true && arrayObj[5].prenchido && arrayObj[8].prenchido && arrayObj[2].nome === X && arrayObj[5].nome === X && arrayObj[8].nome === X || arrayObj[3].prenchido === true && arrayObj[6].prenchido && arrayObj[9].prenchido && arrayObj[3].nome === X && arrayObj[6].nome === X && arrayObj[9].nome === X) {
         vencedor = X
         valueX++
         valorIncrementoO.innerHTML = valueX
     }
 
-    if (arrayObj[1].prenchido === true && arrayObj[2].prenchido && arrayObj[3].prenchido && arrayObj[1].nome === O && arrayObj[2].nome === O && arrayObj[3].nome === O  || arrayObj[4].prenchido === true && arrayObj[5].prenchido && arrayObj[6].prenchido && arrayObj[4].nome === O && arrayObj[5].nome === X && arrayObj[6].nome === O || arrayObj[7].prenchido === true && arrayObj[8].prenchido && arrayObj[9].prenchido && arrayObj[7].nome === O && arrayObj[8].nome === O && arrayObj[9].nome === O || arrayObj[3].prenchido === true && arrayObj[5].prenchido && arrayObj[7].prenchido && arrayObj[3].nome === O && arrayObj[5].nome === O && arrayObj[7].nome === O || arrayObj[1].prenchido === true && arrayObj[5].prenchido && arrayObj[9].prenchido && arrayObj[1].nome === O && arrayObj[5].nome === O && arrayObj[9].nome === O || arrayObj[1].prenchido === true && arrayObj[4].prenchido && arrayObj[7].prenchido && arrayObj[1].nome === O && arrayObj[4].nome === O && arrayObj[7].nome === O || arrayObj[2].prenchido === true && arrayObj[5].prenchido && arrayObj[8].prenchido && arrayObj[2].nome === O && arrayObj[5].nome === O && arrayObj[8].nome === O || arrayObj[3].prenchido === true && arrayObj[6].prenchido && arrayObj[9].prenchido && arrayObj[3].nome === O && arrayObj[6].nome === O && arrayObj[9].nome === O ) {
+    if (arrayObj[1].prenchido === true && arrayObj[2].prenchido && arrayObj[3].prenchido && arrayObj[1].nome === O && arrayObj[2].nome === O && arrayObj[3].nome === O || arrayObj[4].prenchido === true && arrayObj[5].prenchido && arrayObj[6].prenchido && arrayObj[4].nome === O && arrayObj[5].nome === O && arrayObj[6].nome === O || arrayObj[7].prenchido === true && arrayObj[8].prenchido && arrayObj[9].prenchido && arrayObj[7].nome === O && arrayObj[8].nome === O && arrayObj[9].nome === O || arrayObj[3].prenchido === true && arrayObj[5].prenchido && arrayObj[7].prenchido && arrayObj[3].nome === O && arrayObj[5].nome === O && arrayObj[7].nome === O || arrayObj[1].prenchido === true && arrayObj[5].prenchido && arrayObj[9].prenchido && arrayObj[1].nome === O && arrayObj[5].nome === O && arrayObj[9].nome === O || arrayObj[1].prenchido === true && arrayObj[4].prenchido && arrayObj[7].prenchido && arrayObj[1].nome === O && arrayObj[4].nome === O && arrayObj[7].nome === O || arrayObj[2].prenchido === true && arrayObj[5].prenchido && arrayObj[8].prenchido && arrayObj[2].nome === O && arrayObj[5].nome === O && arrayObj[8].nome === O || arrayObj[3].prenchido === true && arrayObj[6].prenchido && arrayObj[9].prenchido && arrayObj[3].nome === O && arrayObj[6].nome === O && arrayObj[9].nome === O) {
         vencedor = O
         valueO++
         valorIncrementoX.innerHTML = valueO
@@ -260,12 +260,12 @@ function ArrayObj(obejeto, posisao) {
 
 function LogicaGameOver() {
     if (obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj5.obejeto == "xis" || obj4.obejeto == "bolinha" && obj5.obejeto == "bolinha" && obj6.obejeto == "bolinha" || obj4.obejeto == "xis" && obj5.obejeto == "xis" && obj6.obejeto == "xis" || obj7.obejeto == "bolinha" && obj8.obejeto == "bolinha" && obj9.obejeto == "bolinha" || obj7.obejeto == "xis" && obj8.obejeto == "xis" && obj9.obejeto == "xis" || obj1.obejeto == "bolinha" && obj2.obejeto == "bolinha" && obj3.obejeto == "bolinha" || obj1.obejeto == "xis" && obj2.obejeto == "xis" && obj3.obejeto == "xis" || obj1.obejeto == "bolinha" && obj4.obejeto == "bolinha" && obj7.obejeto == "bolinha" || obj1.obejeto == "xis" && obj4.obejeto == "xis" && obj7.obejeto == "xis" || obj2.obejeto == "bolinha" && obj5.obejeto == "bolinha" && obj8.obejeto == "bolinha" || obj2.obejeto == "xis" && obj5.obejeto == "xis" && obj8.obejeto == "xis" || obj3.obejeto == "bolinha" && obj6.obejeto == "bolinha" && obj9.obejeto == "bolinha" || obj3.obejeto == "xis" && obj6.obejeto == "xis" && obj9.obejeto == "xis" || obj1.obejeto == "bolinha" && obj5.obejeto == "bolinha" && obj9.obejeto == "bolinha" || obj3.obejeto == "xis" && obj5.obejeto == "xis" && obj7.obejeto == "xis" || obj3.obejeto == "bolinha" && obj5.obejeto == "bolinha" && obj7.obejeto == "bolinha") {
-        alert("vencedor", vencedor)
+        alert("Vencedor: " + vencedor)
         SongButton();
         Vencedor();
     }
 
-    if(obj1.prenchido === true && obj2.prenchido === true && obj3.prenchido === true && obj4.prenchido === true && obj5.prenchido === true && obj6.prenchido === true && obj7.prenchido === true && obj8.prenchido === true && obj9.prenchido === true){
+    if (obj1.prenchido === true && obj2.prenchido === true && obj3.prenchido === true && obj4.prenchido === true && obj5.prenchido === true && obj6.prenchido === true && obj7.prenchido === true && obj8.prenchido === true && obj9.prenchido === true) {
         alert("Empate");
         SongButton();
         Vencedor();
@@ -274,6 +274,7 @@ function LogicaGameOver() {
 
 
 matriz1.addEventListener("click", () => {
+    if (obj1.prenchido) return;
 
     if (updateUser) {
         matriz1.innerHTML = svgX;
@@ -300,6 +301,7 @@ matriz1.addEventListener("click", () => {
 
 
 matriz2.addEventListener("click", () => {
+    if (obj2.prenchido) return;
 
     if (updateUser) {
         matriz2.innerHTML = svgX;
@@ -324,6 +326,7 @@ matriz2.addEventListener("click", () => {
 
 
 matriz3.addEventListener("click", () => {
+    if (obj3.prenchido) return;
 
     if (updateUser) {
         matriz3.innerHTML = svgX;
@@ -347,6 +350,7 @@ matriz3.addEventListener("click", () => {
 })
 
 matriz4.addEventListener("click", () => {
+    if (obj4.prenchido) return;
 
     if (updateUser) {
         matriz4.innerHTML = svgX;
@@ -369,6 +373,7 @@ matriz4.addEventListener("click", () => {
 })
 
 matriz5.addEventListener("click", () => {
+    if (obj5.prenchido) return;
 
     if (updateUser) {
         matriz5.innerHTML = svgX;
@@ -392,6 +397,7 @@ matriz5.addEventListener("click", () => {
 })
 
 matriz6.addEventListener("click", () => {
+    if (obj6.prenchido) return;
 
     if (updateUser) {
         matriz6.innerHTML = svgX;
@@ -415,6 +421,7 @@ matriz6.addEventListener("click", () => {
 })
 
 matriz7.addEventListener("click", () => {
+    if (obj7.prenchido) return;
 
     if (updateUser) {
         matriz7.innerHTML = svgX;
@@ -439,6 +446,7 @@ matriz7.addEventListener("click", () => {
 })
 
 matriz8.addEventListener("click", () => {
+    if (obj8.prenchido) return;
 
     if (updateUser) {
         matriz8.innerHTML = svgX;
@@ -463,6 +471,7 @@ matriz8.addEventListener("click", () => {
 })
 
 matriz9.addEventListener("click", () => {
+    if (obj9.prenchido) return;
 
     if (updateUser) {
         matriz9.innerHTML = svgX;
@@ -486,8 +495,8 @@ matriz9.addEventListener("click", () => {
 
 });
 
-function Vencedor(){
-  obj1.prenchido = false;
+function Vencedor() {
+    obj1.prenchido = false;
     obj1.obejeto = "";
     obj1.nome = "";
     matriz1.innerHTML = "";
